@@ -12,13 +12,18 @@ Planned Directory:
 
 
 Steps to complete:
+    
     * 
+    
     * 
+
     * 
+
     * 
 
 
 Team Member Contributions:
+    
     Kristine Anderson:
         * 
 
