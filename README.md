@@ -3,7 +3,7 @@ PROJECT TITLE
 Kristine Anderson, Srija Lahiri, Nathan Safranek
 
 
-Description: The problem we are solving is the Nagel-Schreckenberg traffic model. This model simulates freeway traffic as a function of car density, so our solution should accurately depict and simulate traffic at different levels of car density.
+Description: The problem we are solving is the Nagel-Schreckenberg traffic model. This model simulates freeway traffic as a function of car density, so our solution should accurately depict and simulate traffic at different levels of car density. We may explore traffic modeling more by adding/deleting lanes of traffic, obstacles, etc. to simulate real-time road conditions.
 
 
 
