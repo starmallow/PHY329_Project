@@ -1,5 +1,6 @@
 The Nagel-Schreckenberg Traffic Model
 
+
 Kristine Anderson, Srija Lahiri, Nathan Safranek
 
 
@@ -9,7 +10,13 @@ Description: The problem we are solving is the Nagel-Schreckenberg traffic model
 
 Planned Directory:
 
+- demo.ipynb: an overview of the projecting, starting from introducing the problem, identifying the base model relating traffic and density, highlighting the relationship through various fine-tuned plots, and expanding the plot to further questions and features to be studied
 
+- src/density.py: implements the Nagel-Schreckenberg model with the division of cells
+
+- src/plots.py: creates visuals of the traffic models
+
+- src/extras.py: implements the cellular automaton model while exploring different cell divisions to reproduce traffic jams 
 
 Steps to complete:
     
