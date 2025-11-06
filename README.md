@@ -1,4 +1,4 @@
-PROJECT TITLE
+The Nagel-Schreckenberg Traffic Model
 
 Kristine Anderson, Srija Lahiri, Nathan Safranek
 
