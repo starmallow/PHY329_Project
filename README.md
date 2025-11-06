@@ -26,7 +26,6 @@ Sources include this [model outline](https://en.wikipedia.org/wiki/Nagel%E2%80%9
 - Introduce complexity to the model, e.g. additional lanes of traffic.
   - Investigate the effect on the relationship between average car velocity, car density, deceleration probability, and the onset of traffic jams.
 
-- demo.ipynb: an overview of the projecting, starting from introducing the problem, identifying the base model relating traffic and density, highlighting the relationship through various fine-tuned plots, and expanding the plot to further questions and features to be studied
 
 # Project Member Contributions:
 
