@@ -17,6 +17,9 @@ class TrafficModelCircular:
         v_max (int): Speed limit of the traffic system.
         p (float): Probability factor for random decceleration events. Float must 
             be between 0 and 1.
+        t0 (int): Initial number of timesteps to run the system through to reach a 
+            state of equilibrium before data collection starts. If None, 10 * cells 
+            is used.
         random_state (None or int): The seed for the random number generator. If None,
             the random number generator is not seeded.
         initial_state (None or array): The initial state of the system. If None, a 
