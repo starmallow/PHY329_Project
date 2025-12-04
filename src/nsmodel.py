@@ -83,7 +83,7 @@ class TrafficModelCircular:
         car_indices = np.asarray(self.state > -1).nonzero()[0]  # need to select 0 index to avoid tuple
         d_next_car = np.roll(car_indices, -1)
         d_next_car[-1] += self.cells
-        d_next_car = d_next_car - car_indices
+        d_next_car -= car_indices
 
         # Step 1: Acceleration
         v_cars = self.state[car_indices]
