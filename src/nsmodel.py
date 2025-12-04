@@ -53,21 +53,15 @@ class TrafficModelNS:
         self.history = [self.state]  # History starts saving after equilibrium
 
 
-    def initial_equilibrium(self, t0)
+    def initial_equilibrium(self, t0):
         """
-        Run the system through n_steps time steps to reach an initial point of equilibrium,
+        Run the system through t0 time steps to reach an initial point of equilibrium,
         after which data collection starts.
         """
         if t0 == None:
             t0 = 10 * self.cells
         for i in range(t0):
             self.state = self.next_state()
-    
-    def next_state(self):
-        """
-        Output the next state of the system.
-        """
-        raise NotImplementedError
 
     def simulate(self, n_steps):
         """
@@ -77,6 +71,12 @@ class TrafficModelNS:
             self.state = self.next_state()
             self.history.append(self.state)
         return self.state
+    
+    def next_state(self):
+        """
+        Output the next state of the system.
+        """
+        raise NotImplementedError
     
 
 
@@ -101,7 +101,7 @@ class TrafficCircle(TrafficModelNS):
         Compute the next state of the circular, closed system.
         """
         # Finding distances between cars
-        car_indices = np.where(self.state > -1)
+        car_indices = np.asarray(self.state > -1).nonzero()[0]  # need to select 0 index to avoid tuple
         d_next_car = np.roll(car_indices, -1)
         d_next_car[-1] += self.cells
         d_next_car = d_next_car - car_indices
@@ -115,7 +115,7 @@ class TrafficCircle(TrafficModelNS):
         v_deccel = np.where(v_accel >= d_next_car, d_next_car - 1, v_accel)
 
         # Step 3: Randomization
-        rand_cars = np.random.choice(2, size=v_deccel, p=[1-self.p, self.p])
+        rand_cars = np.random.choice(2, size=len(car_indices), p=[1-self.p, self.p])
         v_rand = np.where(rand_cars & (v_deccel > 0), v_deccel - 1, v_deccel)
 
         # Step 4: Car Motion
