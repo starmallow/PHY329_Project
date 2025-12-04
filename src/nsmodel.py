@@ -4,10 +4,10 @@
 import numpy as np
 
 
-class TrafficModelNS:
+class TrafficModelCircular:
     """
     Base implementation of the Nagel–Schreckenberg cellular automata model of a single 
-    traffic lane.
+    traffic lane. Uses periodic boundary conditions to create a circular, closed system.
 
     Parameters
         cars (int): The total number of cars in the system. Cannot be greater than the
@@ -74,30 +74,6 @@ class TrafficModelNS:
     
     def next_state(self):
         """
-        Output the next state of the system.
-        """
-        raise NotImplementedError
-    
-
-
-
-class TrafficCircle(TrafficModelNS):
-    """
-    An implementation of the Nagel–Schreckenberg model using periodic boundary conditions
-    to create a circular, closed system.
-
-    Args:
-        cars (int): The total number of cars in the system. Cannot be greater than the
-            number of cells.
-        **kwargs: Additional keyword arguments passed to the base TrafficModelNS class.
-    """
-
-    def __init__(self, cars, **kwargs):
-        # Call the parent class's __init__ method
-        super().__init__(cars, **kwargs)
-
-    def next_state(self):
-        """
         Compute the next state of the circular, closed system.
         """
         # Finding distances between cars
@@ -125,4 +101,32 @@ class TrafficCircle(TrafficModelNS):
         next_state[car_indices] = v_rand
 
         return next_state
+    
+
+
+
+class TrafficBottleneck(TrafficModelCircular):
+    """
+    A modification of the circular Nagel–Schreckenberg model using an open boundary 
+    system. Cars enter the leftmost cell when empty, and cars passing the rightmost 
+    cell exit the system.
+
+    Parameters:
+        cars (int): The total number of cars in the system. Cannot be greater than the
+            number of cells.
+        **kwargs: Additional keyword arguments passed to the base TrafficModelNS class.
+    """
+
+    def __init__(self, cars, **kwargs):
+        # Call the parent class's __init__ method
+        super().__init__(cars, **kwargs)
+
+    def next_state(self):
+        """
+        Output the next state of the system.
+        """
+
+        # to be continued ...
+
+        raise NotImplementedError
 
