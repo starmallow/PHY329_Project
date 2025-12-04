@@ -9,7 +9,7 @@ class TrafficModelCircular:
     Base implementation of the Nagel–Schreckenberg cellular automata model of a single 
     traffic lane. Uses periodic boundary conditions to create a circular, closed system.
 
-    Parameters
+    Parameters:
         cars (int): The total number of cars in the system. Cannot be greater than the
             number of cells.
         cells (int): The number of cells in the traffic lane, which can be occupied 
