@@ -61,6 +61,14 @@ Braking probability was kept constant, $p = 0.5$
 
 
 
+
+
+#### Notes on Interpreting the Plots
+- Traffic is moving from left to right.
+- White spaces are empty. (represented by a "$v$" of -1)
+- The darker the point, the higher the car's velocity.
+
+
 == example of a couple of the most important kinds of plot demonstrations. == \
  - save the image of these plots in results/plots.py and import them into here?
 == include how we calculated the density and flow (same equations in the paper) ? ==
