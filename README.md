@@ -84,7 +84,7 @@ Braking probability was kept constant, $p = 0.5$
 ### Bottleneck Model
 
 <p align="center">
-    <img src="extras/bottleneck.png" width="40%" />
+    <img src="extras/bottleneck.png" width="50%" />
 </p>
 
 
