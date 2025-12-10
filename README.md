@@ -71,6 +71,8 @@ Braking probability was kept constant, $p = 0.5$
 
 <p align="center">
   <img src="extras/densityflow.png" width="50%" />
+<br>
+  <caption> Density vs. Flow </caption>
 </p>
 
 ### Bottleneck Model
