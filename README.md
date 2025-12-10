@@ -45,6 +45,8 @@ As with the circular system, the cars added to the left side begin with an initi
 
 ## Results
 
+The results of the simulations and their respective plots can be seen below.
+
 ### Changes in Braking Probability, Circular Model
 
 
@@ -57,7 +59,7 @@ Traffic density was kept constant, $\rho = 0.25$
 
 Braking probability was kept constant, $p = 0.5$
 
-### Bottleneck
+### Bottleneck Model
 
 
 
