@@ -59,6 +59,8 @@ Traffic density was kept constant, $\rho = 0.25$
 
 Braking probability was kept constant, $p = 0.5$
 
+* Density vs flow plot goes here
+
 ### Bottleneck Model
 
 
