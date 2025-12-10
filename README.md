@@ -18,7 +18,7 @@ Sources include this [model outline](https://en.wikipedia.org/wiki/Nagel%E2%80%9
 == Add professional/APS citation of the research paper: https://hal.science/jpa-00246697/document ==
 
 
-## Theory
+## Governing Rules
 
 The Nagel-Schleckenberg traffic model is defined by four rules that govern the movement of "cars" through the simulation. These rules account for normal traffic movement as well as adding in potential human factors that make this model much more life-like and accurate. The rules, which are all followed simulataneously as the model progresses, are as follows:
 1. Cars that aren't at their maximum velocity ($v ≠ v_{max}$) and have adequate space in front of them ($d$ > $v + 1$) will increase their speed by one.
