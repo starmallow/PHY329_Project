@@ -29,11 +29,9 @@ The circular or infinite loop version of the model is defined mainly by the dens
 
 You start by inputting a fixed density $\rho$ where $\rho = {N \over L} = {Number\ of\ cars\ \over Number\ of\ cells}$, as well as the number of cells you want in your traffic loop. Then, the cars are randomly placed throughout the lane with an initial velocity $v = 0$.
 
-The equations that define the density and flow of the system are defined below.
+The equations that define the density and flow of the system are defined below. (From Nagel, Schreckenberg (1992))
 
-Density: $\bar {\rho}^T = \frac{1}{T} \sum_{t=t_0+1}^{t_0+T} n_{i}(t)$
-
-$\lim_{T \to \infty} \bar{\rho}^T = \rho$
+Density: $\bar {\rho}^T = \frac{1}{T} \sum_{t=t_0+1}^{t_0+T} n_{i}(t)$   and     $\lim_{T \to \infty} \bar{\rho}^T = \rho$
 
 Flow: $\bar{q}^T = \frac{1}{T} \sum_{t=t_0+1}^{t_0+T} n_{i,i+1}(t)$
 
