@@ -75,6 +75,12 @@ Braking probability was kept constant, $p = 0.5$
   <caption> Density vs. Flow </caption>
 </p>
 
+<p align="center">
+  <img src="extras/nsplot.png" width="35%" />
+<br>
+  <caption> Density vs. Flow from Nagel, Schreckenberg (1992) </caption>
+</p>
+
 ### Bottleneck Model
 
 
