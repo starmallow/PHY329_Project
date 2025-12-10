@@ -10,11 +10,12 @@
 
 The Nagel-Schreckenberg model is a framework for modeling single lane traffic flow based on theoretical cellular automata. There are a few simple rules for the model that are all followed simultaneously in each step, which is how the simple rules are used to create more complex patterns. The probability rule is what makes this model “lifelike”, as it accounts for the human aspect of how traffic is created. People get distracted, overreact to brake lights, see obstructions in the road, etc., and that’s often how traffic gets started. The transition from free flowing traffic to congestion (“stop-start waves”) shows how traffic disruptions cascade down the road due to one single car’s fluctuation in speed.
 
-The base model is "binary" in a way, where a cell either has a car in it or it doesn't.
+Sources: 
 
-Sources include this [model outline](https://en.wikipedia.org/wiki/Nagel%E2%80%93Schreckenberg_model).
+Kai Nagel, Michael Schreckenberg. A cellular automaton model for freeway traffic. Journal de
+Physique I, 1992, 2 (12), pp.2221-2229. https://hal.science/jpa-00246697/document
 
-== Add professional/APS citation of the research paper: https://hal.science/jpa-00246697/document ==
+https://en.wikipedia.org/wiki/Nagel%E2%80%93Schreckenberg_model
 
 
 ## Governing Rules
