@@ -68,6 +68,8 @@ Braking probability was kept constant, $p = 0.5$
   <caption> Density vs. Flow </caption>
 </p>
 
+The density and flow that were used to create this plot are defined by the functions in the Circular System section above. This plot can be compared to the original N-S model's plot (seen below) to ensure the simulation is working.
+
 <p align="center">
   <img src="extras/nsplot.png" width="35%" />
 <br>
