@@ -93,15 +93,11 @@ Both the circular and bottleneck systems can be applied to different situations 
 
 ## Directory:
 
-`demo.ipynb` overviews the project; introduces the problem, explores the base model relation of traffic and density with plots, and demonstrates the expanded lane model
+`code/nsmodel.py` implements the base (circular) Nagel-Schreckenberg cellular automaton model and the additional bottleneck model
 
-`src/nsmodel.py` implements the base (circular) Nagel-Schreckenberg cellular automaton model and the additional bottleneck model
+`demos/demo.ipynb` demonstrates how to use the analysis functions to plot the traffic models and tamper with the various parameters
 
-`src/lanes.py` builds upon the Nagel-Schreckenberg model by adding simultaneous lanes
-
-`results/plots.py` initializes the plots to demonstrate the models with varied car density, randomization factors, and traffic lanes
-
-`results/analysis.py` implements the functions for analyzing the models
+`demos/analysis.py` implements the streamlined functions for analyzing the models in demo.ipynb
 
 
 ## Project Member Contributions:
