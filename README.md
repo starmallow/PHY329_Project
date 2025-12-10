@@ -26,7 +26,7 @@ Use a source-code editor. We suggest VS Code with the Jupyter Notebook extension
 
 6. Open the 'PHY329_Project' Folder and access the desired Notebook files and Python scripts to edit or run.
 
-7. Edit or run the desired files. Specifically, open the analysis.py and demo.ipynb and adjust parameters such as the inflow probability, v_max, and v_max_bn to experiment with different intensities of traffic jams, flow patterns, and stop-and-go waves.
+7. Edit or run the desired files. Specifically, open the `analysis.py` and `demo.ipynb` and adjust parameters such as the inflow probability, `v_max`, and `v_max_bn` to experiment with different intensities of traffic jams, flow patterns, and stop-start waves.
 
 
 
