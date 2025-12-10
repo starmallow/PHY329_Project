@@ -72,11 +72,12 @@ def SpaceTimePlot(cells, system_density, timesteps, bottleneck=False,
     ax.set_ylabel("Timestep", fontsize=12)
     ax.set_xlabel("Cell Index", fontsize=12)
     if bottleneck:
-        ax.set_title("Time Evolution of Single, Open Traffic Lane (Bottleneck)", fontsize=14)
+        ax.set_title(f"Time Evolution of Single, Bottleneck Traffic Lane", fontsize=14)
     else:
-        ax.set_title("Time Evolution of Single, Circular Traffic Lane", fontsize=14)
+        ax.set_title(f"Time Evolution of Single, Circular Traffic Lane ($\\rho$ = {system_density})", fontsize=14)
     cbar = plt.colorbar(im, ax=ax, pad=0.02)
     cbar.set_label(f"Car Velocity (cells/timestep)\n(-1 indicates no cars present)", fontsize=10, labelpad=1)
+    cbar.ax.tick_params(labelsize=10)
 
     if save_file_name:
         file = save_file_name + ".jpg"
@@ -160,7 +161,7 @@ def DensityFlowResults(cells, system_density, timesteps, bottleneck=False,
 
 
 
-def PlotDensityFlow(cells, timesteps, bottleneck=False, save_file_name="",
+def PlotDensityFlow(cells, timesteps, bottleneck=False, save_file_name="", 
                     densities=[0.02, 0.04, 0.06, 0.08, 0.1, 0.13, 0.16, 0.2],
                     random_state=None, sample_spacing=100, first_sample=50,
                     v_max=5, p=0.5, t0=None, initial_state=None,
@@ -179,6 +180,9 @@ def PlotDensityFlow(cells, timesteps, bottleneck=False, save_file_name="",
         timesteps (int): The number of timesteps to simulate for data collection.
         random_state (None or int): The seed for the random number generator. If None,
             the random number generator is not seeded.
+
+        save_file_name (str): Name of the .jpg file, if saving the plot. If unnamed,
+            the plot won't be saved.
 
         sample_spacing (int): Steps to take between the sampled cell indices used for 
             data collection. Defaults to 100.
@@ -207,10 +211,11 @@ def PlotDensityFlow(cells, timesteps, bottleneck=False, save_file_name="",
     flow_data = np.empty((2,))
 
     for system_density in densities:
-        dens_temp, flow_temp = DensityFlowResults(cells, system_density, timesteps, bottleneck=False, 
-                                                random_state=None, sample_spacing=100, first_sample=50,
-                                                v_max=5, p=0.5, t0=None, initial_state=None,
-                                                bn_start=None, bn_end=None, v_max_bn=1, inflow=0.5)
+        dens_temp, flow_temp = DensityFlowResults(cells, system_density, timesteps, bottleneck=bottleneck, 
+                                                random_state=random_state, sample_spacing=sample_spacing, 
+                                                first_sample=first_sample, v_max=v_max, p=p, t0=t0, 
+                                                initial_state=initial_state, bn_start=bn_start, bn_end=bn_end, 
+                                                v_max_bn=v_max_bn, inflow=inflow)
         density_data = np.hstack((density_data.copy(), dens_temp.copy()))
         flow_data = np.hstack((flow_data.copy(), flow_temp.copy()))
     
