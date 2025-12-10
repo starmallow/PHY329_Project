@@ -1,36 +1,55 @@
-# Exploring the Nagel-Schreckenberg Traffic Model
+> The idea I'm thinking of for the readme file is the overview of the project, while the demo.ipynb provides and interactive view of the code and effects of paramaters
 
+# Title: (Exploring the Nagel-Schreckenberg Traffic Model)
+
+## Installation Instructions
+== This. (prob include needing numpy and matplotlib ?) ==
+
+
+## Background / Problem Motivation?
+
+== Add background info from the presentation ==
+
+(old proposal intro:)
 We are implementing the Nagel-Schreckenberg traffic cellular automaton model to simulate a single lane of traffic, studying the onset of congestion with respect to car density. We plan to build upon this model and explore the impact of simultaneous lanes of traffic.
 
 Sources include this [model outline](https://en.wikipedia.org/wiki/Nagel%E2%80%93Schreckenberg_model).
 
+== Add professional/APS citation of the research paper: https://hal.science/jpa-00246697/document ==
 
-# Planned Directory:
+
+## Theory
+== Rules of the model; 
+how the circular vs bottleneck differ ==
+
+
+## Results
+== example of a couple of the most important kinds of plot demonstrations. == \
+ - save the image of these plots in results/plots.py and import them into here?
+== include how we calculated the density and flow (same equations in the paper) ? ==
+
+
+## (future directions, applications, connections to other interesting ideas)
+
+
+
+## Directory:
 
 `demo.ipynb` overviews the project; introduces the problem, explores the base model relation of traffic and density with plots, and demonstrates the expanded lane model
 
-`src/nsmodel.py` implements the Nagel-Schreckenberg cellular automaton model
+`src/nsmodel.py` implements the base (circular) Nagel-Schreckenberg cellular automaton model and the additional bottleneck model
 
 `src/lanes.py` builds upon the Nagel-Schreckenberg model by adding simultaneous lanes
 
-`results/plots.py` demonstrates the models with varied car density, randomization factors, and traffic lanes
+`results/plots.py` initializes the plots to demonstrate the models with varied car density, randomization factors, and traffic lanes
+
+`results/analysis.py` implements the functions for analyzing the models
 
 
-# Timeline
+## Project Member Contributions:
 
-- Code the cellular automaton for the Nagel-Schreckenberg base case of a single lane of cars that cycle through four actions: acceleration, slowing down, randomization, and car motion.
-- Explore the base model with simulations.
-  - Plot the road evolution over time to demonstrate traffic congestion.
-  - Evaluate the average car velocity with respect to the car density.
-  - Vary the deceleration probability. Plot the point of sudden traffic jams (slope discontinuity) as a function of the deceleration probability.
-- Introduce complexity to the model, e.g. additional lanes of traffic.
-  - Investigate the effect on the relationship between average car velocity, car density, deceleration probability, and the onset of traffic jams.
+**<ins>Kristine Anderson</ins>** implemented the base Nagel-Schreckenberg model, led the model simulation/plotting, and created the demo notebook.
 
+**<ins>Srija Lahiri</ins>** implemented the bottleneck Nagel-Schreckenberg model and co-led the README.md file.
 
-# Project Member Contributions:
-
-**<ins>Kristine Anderson</ins>** will lead the model simulation/plotting, create the demo notebook, and assist in implementing all models.
-
-**<ins>Srija Lahiri</ins>** will implement the base Nagel-Schreckenberg model.
-
-**<ins>Nathan Safranek</ins>** will implement expanded models (i.e. additional lanes).
+**<ins>Nathan Safranek</ins>** assisted in the model simulation/plotting and co-led the README.md file.
