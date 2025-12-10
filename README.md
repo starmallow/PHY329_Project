@@ -46,7 +46,7 @@ As with the circular system, the cars added to the left side begin with an initi
 ## Results
 
 ### Changes in Braking Probability, Circular Model
-![Probability = 0.25](prob1.png)
+![Probability = 0.25](extras/prob1.png)
 
 == example of a couple of the most important kinds of plot demonstrations. == \
  - save the image of these plots in results/plots.py and import them into here?
