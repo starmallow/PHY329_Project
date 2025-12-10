@@ -45,7 +45,7 @@ As with the circular system, the cars added to the left side begin with an initi
 
 ## Results
 
-The results of the simulations and their respective plots can be seen below.
+The results of the simulations and their respective plots can be seen below. The clear, wave-like patterns show the cascading effect of traffic, as time progresses the traffic moves backwards.
 
 ### Changes in Braking Probability, Circular Model
 
