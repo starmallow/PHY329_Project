@@ -29,6 +29,14 @@ The circular or infinite loop version of the model is defined mainly by the dens
 
 You start by inputting a fixed density $\rho$ where $\rho = {N \over L} = {Number\ of\ cars\ \over Number\ of\ cells}$, as well as the number of cells you want in your traffic loop. Then, the cars are randomly placed throughout the lane with an initial velocity $v = 0$.
 
+The equations that define the density and flow of the system are defined below.
+
+Density: \bar{\rho}^T = \frac{1}{T} \sum_{t=t_0+1}^{t_0+T} n_{i}(t)
+
+\lim_{T \to \infty} \bar{\rho}^T = \rho
+
+Flow: \bar{q}^T = \frac{1}{T} \sum_{t=t_0+1}^{t_0+T} n_{i,i+1}(t)
+
 ### Bottleneck System
 
 The bottleneck or open system simulates a non-constant density situation. The boundary conditions of the system are redefined to create open boundaries. The model adds cars on the left when a space opens up, and deletes cars on the right when they've reached their "destination". This simulates bottleneck situations like a reduction in speed limit in a particular part of a road. Once the cars get past this bottleneck, they are opened up into free flow again. Where the circular system studies how "phantom" traffic jams are formed, this system studies how differing road conditions and restrictions limit the flow of traffic.
