@@ -28,7 +28,20 @@ The Nagel-Schleckenberg traffic model is defined by four rules that govern the m
 
 The third rule is what accounts for the human aspect of traffic creation. People get distracted, overreact to brake lights, see obstructions in the road, etc. and that’s often how traffic gets started.
 
-## Circular vs. Bottleneck Models
+## Circular vs. Bottleneck Systems
+
+The base Nagel-Schreckenberg model can be used in a variety of circumstances and with a variety of conditions. For this particular project, the circular and bottleneck N-S systems were examined.
+
+# Circular System
+
+The circular or infinite loop version of the model is defined mainly by the density of cars on the road, think "racetrack". This density can be altered to simulate different traffic conditions. Because the loop is closed, the density remains constant throughout the entirety of the simulation. This version of the model eliminates "edge effects" like traffic lights, car crashes, and other anomalies entering and leaving the system, it purely isolates traffic jam formation due to driver interactions and braking/accelerating.
+
+You start by inputting a fixed density $\rho$ where $\rho = {N \over L} = {Number\ of\ cars\ \over Number\ of\ cells}$, as well as the number of cells you want in your traffic loop. Then, the cars are randomly placed throughout the lane with an initial velocity $v = 0$.
+
+# Bottleneck System
+
+The bottleneck or open system simulates a non-constant density situation. The boundary conditions of the system are redefined to add cars on the left and delete cars on the right, which simulates bottleneck situations like a reduction in speed limit in a particular part of a road. As with the circular system, the cars added to the left side begin with an initial velocity $v=0$. Once the cars get past this bottleneck, they are opened up into free flow again. Where the circular system studies how "phantom" traffic jams are formed, this system studies how differing road conditions and restrictions limit the flow of traffic.
+
 
 ## Results
 == example of a couple of the most important kinds of plot demonstrations. == \
