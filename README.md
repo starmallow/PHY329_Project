@@ -1,6 +1,4 @@
-> The idea I'm thinking of for the readme file is the overview of the project, while the demo.ipynb provides and interactive view of the code and effects of paramaters
-
-# Title: (Exploring the Nagel-Schreckenberg Traffic Model)
+# Exploring the Nagel-Schreckenberg Traffic Model
 
 ## Installation Instructions
 ==This. (prob include needing numpy and matplotlib ?)==
