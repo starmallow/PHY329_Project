@@ -48,8 +48,8 @@ how the circular vs bottleneck differ ==
 
 ## Project Member Contributions:
 
-**<ins>Kristine Anderson</ins>** implemented the base Nagel-Schreckenberg model, led the model simulation/plotting, and created the demo notebook.
+**<ins>Kristine Anderson</ins>** implemented the base Nagel-Schreckenberg model, led the model simulation/plotting, and co-led the demo notebook.
 
-**<ins>Srija Lahiri</ins>** implemented the bottleneck Nagel-Schreckenberg model and co-led the README.md file.
+**<ins>Srija Lahiri</ins>** implemented the bottleneck Nagel-Schreckenberg model and co-led the demo notebook.
 
-**<ins>Nathan Safranek</ins>** assisted in the model simulation/plotting and co-led the README.md file.
+**<ins>Nathan Safranek</ins>** assisted in the model simulation/plotting and led the README.md file.
