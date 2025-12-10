@@ -71,7 +71,7 @@ Range of densities: 0.10, 0.35, 0.60
 Braking probability was kept constant, $p = 0.5$
 
 <p align="center">
-  <img src="extras/densityflow.png" width="50%" />
+  <img src="extras/flow_v_density.jpg" width="50%" />
 <br>
   <caption> Density vs. Flow </caption>
 </p>
