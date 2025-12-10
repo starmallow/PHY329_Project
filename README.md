@@ -50,7 +50,11 @@ The results of the simulations and their respective plots can be seen below. The
 ### Changes in Braking Probability, Circular Model
 Range of probabilities: 0.25, 0.50, 0.75
 
-<img src="extras/prob1.png" width="500">
+<p align="center">
+  <img src="extras/prob1.png" width="30%" />
+  <img src="extras/prob2.png" width="30%" /> 
+  <img src="extras/prob 3.png" width="30%" />
+</p>
 
 Traffic density was kept constant, $\rho = 0.25$
 
