@@ -115,7 +115,23 @@ class TrafficBottleneck(TrafficModelCircular):
     Parameters:
         cars (int): The total number of cars in the system. Cannot be greater than the
             number of cells.
-        **kwargs: Additional keyword arguments passed to the base TrafficModelNS class.
+        cells (int): The total number of cells in the traffic lane. The road has open boundaries
+            for the bottleneck model, but the number of discrete cells is held constant.
+        v_max (int): The maximum velocity for cars outside the bottleneck.
+        p (float): The natural breaking probability used in the NS model.
+        t0 (int): The number of initial time steps to run to reach equilibrium before recording data.
+            If None, defaults to 10 * cells.
+        random_state (int): The seed for NumPy's random number generator. If None, the random number
+            generator is not seeded.
+        initial_state (array): The initial configuration of the system. If None, cars are placed
+            randomly.
+        bn_start (int or None): The starting cell index of the bottleneck region. If None, no bottleneck
+            region is used.
+        bn_end (int or None): The ending cell index of the bottleneck. If None, there is no bottleneck.
+        v_max_bn (int): The maximum veolcity inside the bottleneck region.
+        inflow (float): The probability that a new car enters the traffic lane at index 0 when that cell
+            is empty.
+        
     """
 
   def __init__(self, cars, cells=100, v_max=5, p=0.5, t0=None, random_state=None, initial_state=None, bn_start=None, bn_end=None, v_max_bn=1, inflow=0.5):
@@ -130,18 +146,25 @@ class TrafficBottleneck(TrafficModelCircular):
       super().__init__(cars=cars, cells=cells, v_max=v_max, p=p, t0=t0, random_state=random_state, initial_state=initial_state)
 
   def next_state(self):
+      """
+          To compute the next state of each car according to the 4-step rule of the NS model
+          for an open-boundary system with a bottleneck region.
+      """
     state = self.state
     cells = self.cells
     p = self.p
 
+    # Identifying where cars are in the traffic lane.
     car_indices = np.asarray(state > -1).nonzero()[0]
     next_state = np.full(cells, -1, int)
 
+    # Checking for a special case of no cars on the road.
     if len(car_indices) == 0:
         if np.random.rand() < self.inflow:
             next_state[0] = 0
         return next_state
 
+    # Finding distance between the cars.
     d_next_car = np.empty(len(car_indices), int)
 
     if len(car_indices) == 1:
@@ -150,6 +173,7 @@ class TrafficBottleneck(TrafficModelCircular):
       d_next_car[:-1] = car_indices[1:] - car_indices[:-1]
       d_next_car[-1] = self.v_max + 1
 
+    # Determining v_max of each car: applying v_max if the car is outside the bottlenck, and v_max_bn for cars inside it.
     if self.bn_start is None:
         v_local = np.full(len(car_indices), self.v_max)
     else:
@@ -169,7 +193,7 @@ class TrafficBottleneck(TrafficModelCircular):
     rand_mask = np.random.rand(len(car_indices)) < p
     v_rand = np.where(rand_mask & (v_decel > 0), v_decel - 1, v_decel)
 
-    # Step 4: Move cars
+    # Step 4: Car Motion
     new_positions = car_indices + v_rand
     valid = new_positions < cells
     new_positions = new_positions[valid]
@@ -177,6 +201,7 @@ class TrafficBottleneck(TrafficModelCircular):
 
     next_state[new_positions] = new_velocities
 
+    # Applying inflow at the left-most cell
     if next_state[0] == -1 and np.random.rand() < self.inflow:
         next_state[0] = 0
 
