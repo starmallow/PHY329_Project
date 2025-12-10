@@ -110,7 +110,8 @@ class TrafficBottleneck(TrafficModelCircular):
     """
     A modification of the circular Nagel–Schreckenberg model using an open boundary
     system. Cars enter the leftmost cell when empty, and cars passing the rightmost
-    cell exit the system.
+    cell exit the system. A reduced maximum is applied to the defined region of 
+    bottleneck traffic.
 
     Parameters:
         cars (int): The total number of cars in the system. Cannot be greater than the
@@ -125,7 +126,6 @@ class TrafficBottleneck(TrafficModelCircular):
             generator is not seeded.
         initial_state (array): The initial configuration of the system. If None, cars are placed
             randomly.
-
         bn_start (int or None): The starting cell index of the bottleneck region. If None, no bottleneck
             region is used.
         bn_end (int or None): The ending cell index of the bottleneck. If None, there is no bottleneck.
@@ -192,8 +192,8 @@ class TrafficBottleneck(TrafficModelCircular):
         v_decel = np.maximum(v_decel, 0)
 
         # Step 3: Randomization
-        rand_mask = np.random.rand(len(car_indices)) < p
-        v_rand = np.where(rand_mask & (v_decel > 0), v_decel - 1, v_decel)
+        rand_cars = np.random.rand(len(car_indices)) < p
+        v_rand = np.where(rand_cars & (v_decel > 0), v_decel - 1, v_decel)
 
         # Step 4: Car Motion
         new_positions = car_indices + v_rand
