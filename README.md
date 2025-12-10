@@ -69,7 +69,9 @@ Range of densities: 0.10, 0.35, 0.60
 
 Braking probability was kept constant, $p = 0.5$
 
-* Density vs flow plot goes here
+<p align="center">
+  <img src="extras/densityflow.png" width="50%" />
+</p>
 
 ### Bottleneck Model
 
