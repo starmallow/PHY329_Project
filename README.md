@@ -8,10 +8,7 @@
 
 ## Background / Problem Motivation?
 
-== Add background info from the presentation ==
-
-(old proposal intro:)
-We are implementing the Nagel-Schreckenberg traffic cellular automaton model to simulate a single lane of traffic, studying the onset of congestion with respect to car density. We plan to build upon this model and explore the impact of simultaneous lanes of traffic.
+The Nagel-Schreckenberg model is a framework for modeling single lane traffic flow based on theoretical cellular automata. There are a few simple rules for the model that are all followed simultaneously in each step, which is how the simple rules are used to create more complex patterns. The probability rule is what makes this model “lifelike”, as it accounts for the human aspect of how traffic is created. People get distracted, overreact to brake lights, see obstructions in the road, etc., and that’s often how traffic gets started. The transition from free flowing traffic to congestion (“stop-start waves”) shows how traffic disruptions cascade down the road due to one single car’s fluctuation in speed.
 
 Sources include this [model outline](https://en.wikipedia.org/wiki/Nagel%E2%80%93Schreckenberg_model).
 
@@ -25,8 +22,6 @@ The Nagel-Schleckenberg traffic model is defined by four rules that govern the m
 2. If the distance to the next car $d < v$, then $v$ is reduced by one unit.
 3. For any moving vehicle (vehicles with v > 0), there is a braking probability $p$ that the velocity will be randomly decreased by one unit.
 4. All cars move forward by $v$ cells.
-
-The third rule is what accounts for the human aspect of traffic creation. People get distracted, overreact to brake lights, see obstructions in the road, etc. and that’s often how traffic gets started.
 
 ## Circular vs. Bottleneck Systems
 
