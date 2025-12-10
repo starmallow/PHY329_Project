@@ -3,7 +3,7 @@
 # Title: (Exploring the Nagel-Schreckenberg Traffic Model)
 
 ## Installation Instructions
-== This. (prob include needing numpy and matplotlib ?) ==
+==This. (prob include needing numpy and matplotlib ?)==
 
 
 ## Background / Problem Motivation?
