@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 def SpaceTimePlot(cells, system_density, timesteps, bottleneck=False,
                         random_state=None, save_file_name="", 
                         v_max=5, p=0.5, t0=None, initial_state=None,
-                        bn_start=None, bn_end=None, v_max_bn=1, inflow=0.5):
+                        bn_start=40, bn_end=60, v_max_bn=2, inflow=0.5):
     """
     Function to streamline creation of the time evolution plots of the traffic lane 
     cells from the Nagel–Schreckenberg models. Displays the plot in jupyter notebook. 
@@ -162,8 +162,8 @@ def DensityFlowResults(cells, system_density, timesteps, bottleneck=False,
 
 
 def PlotDensityFlow(cells, timesteps, bottleneck=False, save_file_name="", 
-                    densities=[0.02, 0.04, 0.06, 0.08, 0.1, 0.13, 0.16, 0.2],
-                    random_state=None, sample_spacing=100, first_sample=50,
+                    densities=[0.02, 0.04, 0.06, 0.08, 0.1, 0.13, 0.16, 0.2, 0.3],
+                    random_state=None, sample_spacing=20, first_sample=10,
                     v_max=5, p=0.5, t0=None, initial_state=None,
                     bn_start=None, bn_end=None, v_max_bn=1, inflow=0.5):
     """
