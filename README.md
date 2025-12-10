@@ -26,9 +26,9 @@ The Nagel-Schleckenberg traffic model is defined by four rules that govern the m
 3. For any moving vehicle (vehicles with v > 0), there is a braking probability $p$ that the velocity will be randomly decreased by one unit.
 4. All cars move forward by $v$ cells.
 
+The third rule is what accounts for the human aspect of traffic creation. People get distracted, overreact to brake lights, see obstructions in the road, etc. and that’s often how traffic gets started.
 
-how the circular vs bottleneck differ ==
-
+## Circular vs. Bottleneck Models
 
 ## Results
 == example of a couple of the most important kinds of plot demonstrations. == \
