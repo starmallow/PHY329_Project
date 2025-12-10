@@ -9,4 +9,4 @@
 
 `demos/analysis.py` implements the streamlined functions for analyzing the models in demo.ipynb
 
-`extras/plots.py` initializes the plot .jpg files to demonstrate the models for the README.md file
+`extras/plots.ipynb` initializes the plot .jpg files to demonstrate the models for the README.md file
