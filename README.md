@@ -40,7 +40,9 @@ You start by inputting a fixed density $\rho$ where $\rho = {N \over L} = {Numbe
 
 ### Bottleneck System
 
-The bottleneck or open system simulates a non-constant density situation. The boundary conditions of the system are redefined to add cars on the left and delete cars on the right, which simulates bottleneck situations like a reduction in speed limit in a particular part of a road. As with the circular system, the cars added to the left side begin with an initial velocity $v=0$. Once the cars get past this bottleneck, they are opened up into free flow again. Where the circular system studies how "phantom" traffic jams are formed, this system studies how differing road conditions and restrictions limit the flow of traffic.
+The bottleneck or open system simulates a non-constant density situation. The boundary conditions of the system are redefined to create open boundaries. The model adds cars on the left when a space opens up, and deletes cars on the right when they've reached their "destination". This simulates bottleneck situations like a reduction in speed limit in a particular part of a road. Once the cars get past this bottleneck, they are opened up into free flow again. Where the circular system studies how "phantom" traffic jams are formed, this system studies how differing road conditions and restrictions limit the flow of traffic.
+
+As with the circular system, the cars added to the left side begin with an initial velocity $v=0$, and the same rules from above apply with the addition of the bottleneck condition.
 
 
 ## Results
