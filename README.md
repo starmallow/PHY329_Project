@@ -35,7 +35,7 @@ Density: $\bar {\rho}^T = \frac{1}{T} \sum_{t=t_0+1}^{t_0+T} n_{i}(t)$   and    
 
 Flow: $\bar{q}^T = \frac{1}{T} \sum_{t=t_0+1}^{t_0+T} n_{i,i+1}(t)$
 
-- n represents the "occupation number", it is 1 when the cell is occupied and 0 when it is not
+- $n$ represents the "occupation number", it is 1 when the cell is occupied and 0 when it is not
 
 ### Bottleneck System
 
