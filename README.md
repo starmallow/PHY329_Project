@@ -48,13 +48,13 @@ As with the circular system, the cars added to the left side begin with an initi
 The results of the simulations and their respective plots can be seen below. The clear, wave-like patterns show the cascading effect of traffic, as time progresses the traffic moves backwards.
 
 ### Changes in Braking Probability, Circular Model
-
+Range of probabilities: 0.25, 0.50, 0.75
 
 
 Traffic density was kept constant, $\rho = 0.25$
 
 ### Changes in Traffic Density, Circular Model
-
+Range of densities: 0.10, 0.35, 0.60
 
 
 Braking probability was kept constant, $p = 0.5$
