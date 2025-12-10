@@ -1,4 +1,4 @@
-# **Exploring the Nagel-Schreckenberg Traffic Model**
+# Exploring the Nagel-Schreckenberg Traffic Model
 
 ## Installation Instructions
 ==This. (prob include needing numpy and matplotlib ?)==
