@@ -1,7 +1,27 @@
 # Exploring the Nagel-Schreckenberg Traffic Model
 
 ## Installation Instructions
-==This. (prob include needing numpy and matplotlib ?)==
+1. Clone the repository:
+```bash
+git clone https://github.com/starmallow/PHY329_Project.git
+cd PHY329_Project
+```
+
+2. Install the necessary packages:
+'''bash
+pip install numpy
+pip install matplotlib
+pip install jupyter
+''' 
+
+Use a source-code editor. We suggest VS Code with the Jupyter Notebook extension and the rest of our installation instructions are for this method.
+
+3. Install VS Code using the following link: https://code.visualstudio.com/download.
+
+4. Once installed, open VS Code, search for both Python and Jupyter in Extensions and install.
+
+5. Open the 'PHY329_Project' Folder and access the desired Notebook files and Python scripts.
+
 
 
 ## Background
