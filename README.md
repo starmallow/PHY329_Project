@@ -1,4 +1,4 @@
-# Exploring the Nagel-Schreckenberg Traffic Model
+, e# Exploring the Nagel-Schreckenberg Traffic Model
 
 ## Installation Instructions
 ==This. (prob include needing numpy and matplotlib ?)==
@@ -46,7 +46,7 @@ As with the circular system, the cars added to the left side begin with an initi
 
 ## Results
 
-The results of the simulations and their respective plots can be seen below. The clear, wave-like patterns show the cascading effect of traffic, as time progresses the traffic moves backwards.
+The results of the simulations and their respective plots can be seen below. The clear, wave-like patterns show the cascading effect of traffic, as time progresses the traffic moves backwards. The effects of altering the traffic creation parameters (density and braking probability), show a clear pattern in traffic creation. More cars = more traffic and more braking = more traffic.
 
 ### Changes in Braking Probability, Circular Model
 Range of probabilities: 0.25, 0.50, 0.75
@@ -92,7 +92,7 @@ The density and flow that were used to create this plot are defined by the funct
 
 #### Notes on Interpreting the Plots
 - Traffic is moving from left to right.
-- White spaces are empty. (represented by a $v$ value of -1)
+- White spaces are empty, represented by a $v$ value of -1.
 - The darker the point, the higher the car's velocity.
 
 
