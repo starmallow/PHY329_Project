@@ -6,9 +6,11 @@
 ==This. (prob include needing numpy and matplotlib ?)==
 
 
-## Background / Problem Motivation?
+## Background
 
 The Nagel-Schreckenberg model is a framework for modeling single lane traffic flow based on theoretical cellular automata. There are a few simple rules for the model that are all followed simultaneously in each step, which is how the simple rules are used to create more complex patterns. The probability rule is what makes this model “lifelike”, as it accounts for the human aspect of how traffic is created. People get distracted, overreact to brake lights, see obstructions in the road, etc., and that’s often how traffic gets started. The transition from free flowing traffic to congestion (“stop-start waves”) shows how traffic disruptions cascade down the road due to one single car’s fluctuation in speed.
+
+The base model is "binary" in a way, where a cell either has a car in it or it doesn't.
 
 Sources include this [model outline](https://en.wikipedia.org/wiki/Nagel%E2%80%93Schreckenberg_model).
 
@@ -22,6 +24,8 @@ The Nagel-Schleckenberg traffic model is defined by four rules that govern the m
 2. If the distance to the next car $d < v$, then $v$ is reduced by one unit.
 3. For any moving vehicle (vehicles with v > 0), there is a braking probability $p$ that the velocity will be randomly decreased by one unit.
 4. All cars move forward by $v$ cells.
+
+Additionally, the base model is "binary" in a way, where a cell either has a car in it or it doesn't.
 
 ## Circular vs. Bottleneck Systems
 
