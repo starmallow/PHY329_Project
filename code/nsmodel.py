@@ -106,12 +106,10 @@ class TrafficModelCircular:
         return next_state
     
 
-
-
 class TrafficBottleneck(TrafficModelCircular):
-    """
-    A modification of the circular Nagel–Schreckenberg model using an open boundary 
-    system. Cars enter the leftmost cell when empty, and cars passing the rightmost 
+  """
+    A modification of the circular Nagel–Schreckenberg model using an open boundary
+    system. Cars enter the leftmost cell when empty, and cars passing the rightmost
     cell exit the system.
 
     Parameters:
@@ -120,16 +118,66 @@ class TrafficBottleneck(TrafficModelCircular):
         **kwargs: Additional keyword arguments passed to the base TrafficModelNS class.
     """
 
-    def __init__(self, cars, **kwargs):
-        # Call the parent class's __init__ method
-        super().__init__(cars, **kwargs)
+  def __init__(self, cars, cells=100, v_max=5, p=0.5, t0=None, random_state=None, initial_state=None, bn_start=None, bn_end=None, v_max_bn=1, inflow=0.5):
 
-    def next_state(self):
-        """
-        Output the next state of the system.
-        """
+      # Extra bottleneck parameters
+      self.bn_start = bn_start
+      self.bn_end = bn_end
+      self.v_max_bn = v_max_bn
+      self.inflow = inflow
 
-        # to be continued ...
+      # Call the parent class's __init__ method
+      super().__init__(cars=cars, cells=cells, v_max=v_max, p=p, t0=t0, random_state=random_state, initial_state=initial_state)
 
-        raise NotImplementedError
+  def next_state(self):
+    state = self.state
+    cells = self.cells
+    p = self.p
 
+    car_indices = np.asarray(state > -1).nonzero()[0]
+    next_state = np.full(cells, -1, int)
+
+    if len(car_indices) == 0:
+        if np.random.rand() < self.inflow:
+            next_state[0] = 0
+        return next_state
+
+    d_next_car = np.empty(len(car_indices), int)
+
+    if len(car_indices) == 1:
+      d_next_car[0] = self.v_max + 1
+    else:
+      d_next_car[:-1] = car_indices[1:] - car_indices[:-1]
+      d_next_car[-1] = self.v_max + 1
+
+    if self.bn_start is None:
+        v_local = np.full(len(car_indices), self.v_max)
+    else:
+        in_bn = (car_indices >= self.bn_start) & (car_indices <= self.bn_end)
+        v_local = np.where(in_bn, self.v_max_bn, self.v_max)
+
+    v_cars = state[car_indices]
+
+    # Step 1: Acceleration
+    v_accel = np.where(v_cars < v_local, v_cars + 1, v_cars)
+
+    # Step 2: Slowing down
+    v_decel = np.where(v_accel >= d_next_car, d_next_car - 1, v_accel)
+    v_decel = np.maximum(v_decel, 0)
+
+    # Step 3: Randomization
+    rand_mask = np.random.rand(len(car_indices)) < p
+    v_rand = np.where(rand_mask & (v_decel > 0), v_decel - 1, v_decel)
+
+    # Step 4: Move cars
+    new_positions = car_indices + v_rand
+    valid = new_positions < cells
+    new_positions = new_positions[valid]
+    new_velocities = v_rand[valid]
+
+    next_state[new_positions] = new_velocities
+
+    if next_state[0] == -1 and np.random.rand() < self.inflow:
+        next_state[0] = 0
+
+    return next_state
