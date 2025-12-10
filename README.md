@@ -46,7 +46,9 @@ As with the circular system, the cars added to the left side begin with an initi
 
 ## Results
 
-The results of the simulations and their respective plots can be seen below. The clear, wave-like patterns show the cascading effect of traffic, as time progresses the traffic moves backwards. The effects of increasing/decreasing the traffic model parameters (density and braking probability) show a clear pattern in traffic creation. More cars = more traffic and more braking = more traffic.
+The results of the simulations and their respective plots can be seen below. The clear, wave-like patterns show the cascading effect of traffic, as time progresses the traffic moves backwards. The effects of increasing/decreasing the traffic model parameters (density and braking probability) show clear patterns in traffic creation. 
+More cars = more traffic.
+More braking = more traffic.
 
 ### Changes in Braking Probability, Circular Model
 Range of probabilities: 0.25, 0.50, 0.75
