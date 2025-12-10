@@ -69,7 +69,7 @@ Braking probability was kept constant, $p = 0.5$
 
 #### Notes on Interpreting the Plots
 - Traffic is moving from left to right.
-- White spaces are empty. (represented by a "$v$" of -1)
+- White spaces are empty. (represented by a $v$ value of -1)
 - The darker the point, the higher the car's velocity.
 
 
