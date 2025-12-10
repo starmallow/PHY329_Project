@@ -175,7 +175,7 @@ class TrafficBottleneck(TrafficModelCircular):
             d_next_car[:-1] = car_indices[1:] - car_indices[:-1]
             d_next_car[-1] = self.v_max + 1
 
-        # Determining v_max of each car: applying v_max if the car is outside the bottlenck, and v_max_bn for cars inside it.
+        # Determining v_max of each car: applying v_max if the car is outside the bottlneck, and v_max_bn for cars inside it.
         if self.bn_start is None:
             v_local = np.full(len(car_indices), self.v_max)
         else:
