@@ -31,11 +31,11 @@ You start by inputting a fixed density $\rho$ where $\rho = {N \over L} = {Numbe
 
 The equations that define the density and flow of the system are defined below.
 
-Density: \bar{\rho}^T = \frac{1}{T} \sum_{t=t_0+1}^{t_0+T} n_{i}(t)
+Density: $\bar {\rho}^T = \frac{1}{T} \sum_{t=t_0+1}^{t_0+T} n_{i}(t)$
 
-\lim_{T \to \infty} \bar{\rho}^T = \rho
+$\lim_{T \to \infty} \bar{\rho}^T = \rho$
 
-Flow: \bar{q}^T = \frac{1}{T} \sum_{t=t_0+1}^{t_0+T} n_{i,i+1}(t)
+Flow: $\bar{q}^T = \frac{1}{T} \sum_{t=t_0+1}^{t_0+T} n_{i,i+1}(t)$
 
 ### Bottleneck System
 
