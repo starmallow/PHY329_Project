@@ -46,6 +46,10 @@ As with the circular system, the cars added to the left side begin with an initi
 
 
 ## Results
+
+### Changes in Braking Probability, Circular Model
+
+
 == example of a couple of the most important kinds of plot demonstrations. == \
  - save the image of these plots in results/plots.py and import them into here?
 == include how we calculated the density and flow (same equations in the paper) ? ==
