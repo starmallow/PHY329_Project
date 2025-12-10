@@ -71,7 +71,10 @@ def SpaceTimePlot(cells, system_density, timesteps, bottleneck=False,
 
     ax.set_ylabel("Timestep", fontsize=12)
     ax.set_xlabel("Cell Index", fontsize=12)
-    ax.set_title("Time Evolution of Single, Circular Traffic Lane", fontsize=14)
+    if bottleneck:
+        ax.set_title("Time Evolution of Single, Open Traffic Lane (Bottleneck)", fontsize=14)
+    else:
+        ax.set_title("Time Evolution of Single, Circular Traffic Lane", fontsize=14)
     cbar = plt.colorbar(im, ax=ax, pad=0.02)
     cbar.set_label(f"Car Velocity (cells/timestep)\n(-1 indicates no cars present)", fontsize=10, labelpad=1)
 
