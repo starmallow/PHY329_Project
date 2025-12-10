@@ -32,13 +32,13 @@ The third rule is what accounts for the human aspect of traffic creation. People
 
 The base Nagel-Schreckenberg model can be used in a variety of circumstances and with a variety of conditions. For this particular project, the circular and bottleneck N-S systems were examined.
 
-# Circular System
+### Circular System
 
 The circular or infinite loop version of the model is defined mainly by the density of cars on the road, think "racetrack". This density can be altered to simulate different traffic conditions. Because the loop is closed, the density remains constant throughout the entirety of the simulation. This version of the model eliminates "edge effects" like traffic lights, car crashes, and other anomalies entering and leaving the system, it purely isolates traffic jam formation due to driver interactions and braking/accelerating.
 
 You start by inputting a fixed density $\rho$ where $\rho = {N \over L} = {Number\ of\ cars\ \over Number\ of\ cells}$, as well as the number of cells you want in your traffic loop. Then, the cars are randomly placed throughout the lane with an initial velocity $v = 0$.
 
-# Bottleneck System
+### Bottleneck System
 
 The bottleneck or open system simulates a non-constant density situation. The boundary conditions of the system are redefined to add cars on the left and delete cars on the right, which simulates bottleneck situations like a reduction in speed limit in a particular part of a road. As with the circular system, the cars added to the left side begin with an initial velocity $v=0$. Once the cars get past this bottleneck, they are opened up into free flow again. Where the circular system studies how "phantom" traffic jams are formed, this system studies how differing road conditions and restrictions limit the flow of traffic.
 
