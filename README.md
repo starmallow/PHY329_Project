@@ -51,9 +51,9 @@ As with the circular system, the cars added to the left side begin with an initi
 == include how we calculated the density and flow (same equations in the paper) ? ==
 
 
-## (future directions, applications, connections to other interesting ideas)
+## Future Directions and Applications
 
-
+Both the circular and bottleneck systems can be applied to different situations to simulate and study traffic formation. An extension from the base single-lane N-S model would be a multi-lane system. This model would follow similar guidelines to the single-lane system, with the addition of a new set of parameters that defines how, when, and how often cars switch from one lane to another. A multi-lane model would be much more applicable to modern day traffic, as most roads that are impacted by traffic are multi-lane roads.
 
 ## Directory:
 
