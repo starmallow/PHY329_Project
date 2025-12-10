@@ -118,3 +118,10 @@ Both the circular and bottleneck systems can be applied to different situations 
 **<ins>Srija Lahiri</ins>** implemented the bottleneck Nagel-Schreckenberg model and co-led the demo notebook.
 
 **<ins>Nathan Safranek</ins>** assisted in the model simulation/plotting and led the README.md file.
+
+
+## References
+
+* Kai Nagel, Michael Schreckenberg. A cellular automaton model for freeway traffic. Journal de Physique I, 1992, 2 (12), pp.2221-2229. https://hal.science/jpa-00246697/document
+
+* Nagel-Schreckenberg model. Wikipedia, 2025. https://en.wikipedia.org/wiki/Nagel%E2%80%93Schreckenberg_model
